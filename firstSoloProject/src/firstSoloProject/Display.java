@@ -22,7 +22,7 @@ public class Display
 				Choice();
 				System.out.println(userChoice);
 				visualDisplay();
-				while(win){
+				while(win = true){
 					UserInput.locationChoice();
 					ComputerInput.play();
 					UserInput.winValue();
@@ -57,7 +57,7 @@ public class Display
 		public static void Choice(){
 			System.out.println("Would you like to be X's or O's? " );
 			Scanner userXorOinput = new Scanner(System.in);
-			String userXorO = userXorOinput.nextLine();
+			String userXorO = userXorOinput.nextLine().toUpperCase();
 			System.out.println("You have chosen " + userXorO);
 			
 			 
