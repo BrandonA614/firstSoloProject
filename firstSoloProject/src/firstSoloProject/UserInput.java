@@ -15,10 +15,12 @@ public class UserInput
 				Scanner locationInput = new Scanner(System.in);
 				String location = locationInput.nextLine();
 				
+				
 				while(Win = true){
 				if(location.equals("A1") && location != Display.computerGiven){
-					Display.boardO[0][0] = Display.userChoice;			
+					Display.boardO[0][0] = Display.userChoice;	
 					break;
+					
 					
 				}else if(location.equals("A2") && location != Display.computerGiven){
 					Display.boardO[1][0] = Display.userChoice;
@@ -52,10 +54,11 @@ public class UserInput
 					Display.boardO[2][2] = Display.userChoice;
 					break;
 				}
-				}
-			
-			
+			}
 		}
+				
+			
+		
 //		public static void LocationQuestion(){
 //			System.out.println("Where would you like to go?");
 //			Scanner locationInput = new Scanner(System.in);
@@ -64,28 +67,24 @@ public class UserInput
 //			
 //		}
 		public static void winValue(){
+	
 			if(
-					//A to 3 B to 3 and C to 3 = Win 
-				Display.boardO[0][0].equals(Display.userChoice) && Display.boardO[1][0].equals(Display.userChoice) && Display.boardO[2][0].equals(Display.userChoice)||
-				Display.boardO[0][1].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[2][1].equals(Display.userChoice)||
-				Display.boardO[0][2].equals(Display.userChoice) && Display.boardO[1][2].equals(Display.userChoice) && Display.boardO[2][2].equals(Display.userChoice)||
-				//1 to C 2 to C and 3 to C = Win
-				Display.boardO[0][0].equals(Display.userChoice) && Display.boardO[0][1].equals(Display.userChoice) && Display.boardO[0][2].equals(Display.userChoice)||
-				Display.boardO[1][0].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[1][2].equals(Display.userChoice)||
-				Display.boardO[2][0].equals(Display.userChoice) && Display.boardO[2][1].equals(Display.userChoice) && Display.boardO[2][2].equals(Display.userChoice)||
-				//A1 to C 3 = Win
-				Display.boardO[0][2].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[2][0].equals(Display.userChoice)||
-				//A 3 to C 1 = Win
-				Display.boardO[2][2].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[0][0].equals(Display.userChoice)
-				
-					
-					
-					
-					){
-					System.out.println("You have won! Congratulations");
-					Display.win = true;
-					
-					
+			//A to 3 B to 3 and C to 3 = Win 
+			Display.boardO[0][0].equals(Display.userChoice) && Display.boardO[1][0].equals(Display.userChoice) && Display.boardO[2][0].equals(Display.userChoice)||
+			Display.boardO[0][1].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[2][1].equals(Display.userChoice)||
+			Display.boardO[0][2].equals(Display.userChoice) && Display.boardO[1][2].equals(Display.userChoice) && Display.boardO[2][2].equals(Display.userChoice)||
+			//1 to C 2 to C and 3 to C = Win
+			Display.boardO[0][0].equals(Display.userChoice) && Display.boardO[0][1].equals(Display.userChoice) && Display.boardO[0][2].equals(Display.userChoice)||
+			Display.boardO[1][0].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[1][2].equals(Display.userChoice)||
+			Display.boardO[2][0].equals(Display.userChoice) && Display.boardO[2][1].equals(Display.userChoice) && Display.boardO[2][2].equals(Display.userChoice)||
+			//A1 to C 3 = Win
+			Display.boardO[0][2].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[2][0].equals(Display.userChoice)||
+			//A 3 to C 1 = Win
+			Display.boardO[2][2].equals(Display.userChoice) && Display.boardO[1][1].equals(Display.userChoice) && Display.boardO[0][0].equals(Display.userChoice)
+			)				
+				{
+				System.out.println("You have won! Congratulations");
+				Display.win = false;				
 				}
 				
 				
@@ -98,6 +97,6 @@ public class UserInput
 				
 			}
 			
-		}
+	}
 	
 		

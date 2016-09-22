@@ -22,7 +22,7 @@ public class Display
 				Choice();
 				System.out.println(userChoice);
 				visualDisplay();
-				while(win = true){
+				while(win){
 					UserInput.locationChoice();
 					ComputerInput.play();
 					UserInput.winValue();
