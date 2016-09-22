@@ -13,7 +13,7 @@ public class UserInput
 			
 				System.out.println("Where would you like to go?");
 				Scanner locationInput = new Scanner(System.in);
-				String location = locationInput.nextLine();
+				String location = locationInput.nextLine().toUpperCase();
 				
 				
 				while(Win = true){
@@ -59,13 +59,7 @@ public class UserInput
 				
 			
 		
-//		public static void LocationQuestion(){
-//			System.out.println("Where would you like to go?");
-//			Scanner locationInput = new Scanner(System.in);
-//			String location = locationInput.nextLine();
-//			
-//			
-//		}
+
 		public static void winValue(){
 	
 			if(
@@ -85,7 +79,27 @@ public class UserInput
 				{
 				System.out.println("You have won! Congratulations");
 				Display.win = false;				
+				}else if(
+						//A to 3 B to 3 and C to 3 = Win 
+						Display.boardO[0][0].equals(Display.computerGiven) && Display.boardO[1][0].equals(Display.computerGiven) && Display.boardO[2][0].equals(Display.computerGiven)||
+						Display.boardO[0][1].equals(Display.computerGiven) && Display.boardO[1][1].equals(Display.computerGiven) && Display.boardO[2][1].equals(Display.computerGiven)||
+						Display.boardO[0][2].equals(Display.computerGiven) && Display.boardO[1][2].equals(Display.computerGiven) && Display.boardO[2][2].equals(Display.computerGiven)||
+						//1 to C 2 to C and 3 to C = Win
+						Display.boardO[0][0].equals(Display.computerGiven) && Display.boardO[0][1].equals(Display.computerGiven) && Display.boardO[0][2].equals(Display.computerGiven)||
+						Display.boardO[1][0].equals(Display.computerGiven) && Display.boardO[1][1].equals(Display.computerGiven) && Display.boardO[1][2].equals(Display.computerGiven)||
+						Display.boardO[2][0].equals(Display.computerGiven) && Display.boardO[2][1].equals(Display.computerGiven) && Display.boardO[2][2].equals(Display.computerGiven)||
+						//A1 to C 3 = Win
+						Display.boardO[0][2].equals(Display.computerGiven) && Display.boardO[1][1].equals(Display.computerGiven) && Display.boardO[2][0].equals(Display.computerGiven)||
+						//A 3 to C 1 = Win
+						Display.boardO[2][2].equals(Display.computerGiven) && Display.boardO[1][1].equals(Display.computerGiven) && Display.boardO[0][0].equals(Display.computerGiven)
+						)
+					{
+					
+							System.out.println("You have lost :(");
+							Display.win=false;
 				}
+					
+					
 				
 				
 					
